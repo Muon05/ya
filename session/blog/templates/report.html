@@ -1,0 +1,8 @@
+<h1>신고하기</h1>
+
+    {% csrf_token %}
+    신고 제목 : <input type="text" name="title" value="{{ old_blog.title }}"/>
+    신고 사유 : <textarea name="content" id="" cols="30" rows="10">{{ old_blog.content }}</textarea>
+    <input type="submit" value="작성하기"/>
+
+<a href="{% url 'home' %}">홈으로 가기</a>
